@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+
+/** <= mostrar las url del portafolio para la vista**/
+
+.name {
+    font-family: 'Hachi Maru Pop', cursive;
+    color: #70c27f
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+.nametwo {
+    font-family: 'Source Code Pro', monospace;
+    color: #70c27f
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Texturina&display=swap');
+.namehtree {
+    font-family: 'Texturina', serif;
+    color: #70c27f
+}
