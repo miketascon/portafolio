@@ -7,6 +7,12 @@
     color: #70c27f
 }
 
+.name:hover {
+    filter: blur(0.50px);
+    transition: 500ms;
+    color: #2b7538
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 .nametwo {
     font-family: 'Source Code Pro', monospace;
