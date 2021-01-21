@@ -1,0 +1,313 @@
+/********************** Nuevo header ************************************/
+
+nav {
+    background-color: var(--background-cool-transparent) !important;
+    padding: 5px 20px;
+    position: fixed;
+    width: 100%;
+    border-top: 3px solid #21465e;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo a {
+    color: var(--eucalyptus) !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.logo a:hover {
+    text-decoration: none;
+    color: var(--green-hover);
+    transition: 500ms;
+}
+
+.menu li {
+    font-size: var(--fz-sm);
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+.logo a,
+.toggle a {
+    font-size: var(--fz-xxl);
+}
+
+.button.secondary a {
+    color: var(--light-slate);
+}
+
+.button.secondary {
+    border-bottom: 1px var(--eucalyptus) solid;
+}
+
+.toggle a {
+    color: var(--light-slate);
+}
+
+.toggle a:hover {
+    color: var(--light-slate);
+    color: var(--green-hover);
+}
+
+.links {
+    color: var(--light-slate);
+    font-size: var(--fz-sm);
+}
+
+.links:hover {
+    filter: blur(0.7px);
+    transition: 800ms;
+    color: var(--green-hover);
+}
+
+
+/**************************** Mobile menu ************************************/
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+
+/*************************************** Tablet menu ****************************/
+
+@media all and (min-width: 600px) {
+    .menu {
+        justify-content: center !important;
+    }
+    .logo {
+        flex: 1;
+    }
+    .toggle {
+        flex: 1;
+        text-align: right;
+    }
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle {
+        order: 2;
+    }
+    .button.secondary {
+        border: 0;
+    }
+    .button a {
+        padding: 7.5px 15px;
+        background: teal;
+        border: 1px var(--eucalyptus) solid;
+        border-radius: 5px;
+    }
+    .button.secondary a {
+        background: transparent;
+    }
+    .button a:hover {
+        text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+    .button.secondary a:hover {
+        color: var(--green-hover);
+    }
+}
+
+
+/**************************************** Desktop menu *************************************/
+
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+    }
+    .button {
+        order: 2;
+    }
+    .menu li {
+        padding: 15px 10px;
+    }
+    .menu li.button {
+        padding-right: 0;
+    }
+}
+
+
+/************************ logo tranformation *********************************/
+
+
+/****************************************************************/
+
+
+/*
+#main-header {
+    background-color: var(--background-cool-transparent) !important;
+    height: 80px;
+    border-top: 3px solid #21465e;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 10px 30px -10px var(--navy-shadow); 
+}
+
+.menu_bar {
+    display: none;
+}
+
+.links {
+    color: var(--light-slate);
+    font-size: var(--fz-md);
+}
+
+.links:hover {
+    filter: blur(0.7px);
+    transition: 800ms;
+    color: var(--green-hover);
+}
+
+#logo-header {
+    float: left;
+    padding-top: 25px;
+    padding-left: 40px;
+    padding: 15px 0 0 30px; 
+    text-decoration: none;
+    color: var(--eucalyptus);
+}
+
+#logo-header:hover {
+    color: var(--green-hover);
+    transition: 500ms;
+}
+
+#logo-header .site-name {
+    display: block;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+#logo-header .site-desc {
+    display: block;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: var(--quinto);
+}
+
+nav {
+   float: rigth; 
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-right: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 780px) {
+    #main-header {
+        background-color: rgb(18, 46, 65) !important;
+        height: 100%;
+        overflow: hidden;
+        width: 80%;
+        position: fixed;
+        border-bottom: 0.2px solid #21465e;
+    }
+    nav {
+        float: none;
+    }
+    nav ul li {
+        display: block;
+        float: none;
+        border-bottom: 0.2px solid #21465e;
+        text-align: center;
+    }
+    #logo-header {
+        display: none;
+    }
+    .menu_bar {
+        display: block;
+        width: 100%;
+        background-color: rgba(13, 33, 46, 0.9) !important;
+        margin: 0;
+        padding: 0;
+    }
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 20px;
+        width: 100%;
+        text-decoration: none !important;
+        background-color: rgba(13, 33, 46, 0.9) !important;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .bt-menu {
+        float: left;
+        text-decoration: none;
+        color: #64ffda;
+        font-weight: 700;
+        font-size: 1.2em;
+    }
+    .bt-menu:hover {
+        color: #4fd0b2;
+        transition: 500ms;
+    }
+    .menu_bar .icon {
+        float: right !important;
+        font-size: 30px !important;
+    }
+}
+*/
