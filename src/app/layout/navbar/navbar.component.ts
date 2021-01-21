@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $;
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -17,6 +19,15 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $(() => {
+      $('.toggle').on('click', () => {
+        if ($('.item').hasClass('active')) {
+          $('.item').removeClass('active');
+          $(this).find('a').html('<i class="fas fa-times"></i>');
+        } else {
+          $('.item').addClass('active'); $(this).find('a').html('<i class="fas fa-times"></i>');
+        } });
+    });
   }
 
 }

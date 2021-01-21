@@ -1,133 +1,137 @@
-#main-header {
-    /* background-color: #0d212e !important; */
-    background-color: rgba(13, 33, 46, 0.7) !important;
-    height: 80px;
-    /* border-bottom: 0.2px solid #21465e; */
-    overflow: hidden;
-    width: 100%;
-    position: fixed;
+/* Mobile menu */
+
+nav {
+    background: #0d212e;
+    padding: 5px 20px;
 }
 
-.menu_bar {
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+.logo a,
+.toggle a {
+    font-size: 20px;
+}
+
+.button.secondary {
+    border-bottom: 1px #444 solid;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
     display: none;
 }
 
-.links {
-    color: #5e7887;
-    font-size: 12px;
-}
-
-.links:hover {
-    filter: blur(0.7px);
-    transition: 800ms;
-    color: #64ffda;
-}
-
-#logo-header {
-    float: left;
-    padding: 15px 0 0 30px;
-    text-decoration: none;
-    color: #64ffda;
-}
-
-#logo-header:hover {
-    color: #4fd0b2;
-    transition: 500ms;
-}
-
-#logo-header .site-name {
+.item.active {
     display: block;
-    font-weight: 700;
-    font-size: 1.2em;
-}
-
-#logo-header .site-desc {
-    display: block;
-    font-weight: 300;
-    font-size: 0.8em;
-    color: #5e7887;
 }
 
 
-/*
- * Navegación
- */
+/* Tablet menu */
 
-nav {
-    float: right;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    padding-right: 30px;
-}
-
-nav ul li {
-    display: inline-block;
-    line-height: 80px;
-}
-
-nav ul li a {
-    display: block;
-    padding: 0 10px;
-    text-decoration: none;
-}
-
-@media screen and (max-width: 780px) {
-    #main-header {
-        background-color: rgb(18, 46, 65) !important;
-        height: 100%;
-        overflow: hidden;
-        width: 80%;
-        position: fixed;
+@media all and (min-width: 600px) {
+    .menu {
+        justify-content: center;
     }
-    nav {
-        float: none;
+    .logo {
+        flex: 1;
     }
-    nav ul li {
+    .toggle {
+        flex: 1;
+        text-align: right;
+    }
+    .item.button {
+        width: auto;
+        order: 1;
         display: block;
-        float: none;
-        border-bottom: 0.2px solid #21465e;
-        text-align: center;
     }
-    #logo-header {
+    .toggle {
+        order: 2;
+    }
+    .button.secondary {
+        border: 0;
+    }
+    .button a {
+        padding: 7.5px 15px;
+        background: teal;
+        border: 1px #006d6d solid;
+    }
+    .button.secondary a {
+        background: transparent;
+    }
+    .button a:hover {
+        text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+    .button.secondary a:hover {
+        color: #ddd;
+    }
+}
+
+
+/* Desktop menu */
+
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+    .toggle {
         display: none;
     }
-    .menu_bar {
-        display: block;
-        width: 100%;
-        background-color: rgba(13, 33, 46, 0.9) !important;
-        margin: 0;
-        padding: 0;
+    .logo {
+        order: 0;
     }
-    .menu_bar .bt-menu {
-        display: block;
-        margin: 0;
+    .item {
+        order: 1;
+    }
+    .button {
+        order: 2;
+    }
+    .menu li {
+        padding: 15px 10px;
+    }
+    .menu li.button {
         padding-right: 0;
-        width: 100%;
-        padding: 20px;
-        text-decoration: none !important;
-        background-color: rgba(13, 33, 46, 0.9) !important;
-        text-align: center;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    .bt-menu {
-        float: left;
-        text-decoration: none;
-        color: #64ffda;
-        font-weight: 700;
-        font-size: 1.2em;
-    }
-    .bt-menu:hover {
-        color: #4fd0b2;
-        transition: 500ms;
-    }
-    .menu_bar .icon {
-        float: right !important;
-        font-size: 30px !important;
     }
 }
