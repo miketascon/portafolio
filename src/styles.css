@@ -1,4 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+
+/** <= mostrar las url del portafolio para la vista**/
+
+.fontone {
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+.fonttwo {
+    font-family: 'Source Code Pro', monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Texturina&display=swap');
+.fontthree {
+    font-family: 'Texturina', serif;
+}
+
 body {
     /*  background-color: #0d2c3f !important; */
     background-color: #0d212e !important;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #64ffda;
+    border-radius: 10px;
 }

@@ -4,11 +4,13 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home.routing';
 
 
+
 @NgModule({
   declarations: [HomeComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+
   ],
   exports: [HomeComponent]
 })
