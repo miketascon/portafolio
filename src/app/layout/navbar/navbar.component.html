@@ -1,11 +1,64 @@
-<nav>
-    <ul class="menu">
-        <li class="logo"><a href="#">Invisible App</a></li>
-        <li class="item"><a href="#">Home</a></li>
-        <li class="item"><a href="#">About</a></li>
-        <li class="item"><a href="#">Services</a></li>
-        <li class="item"><a href="#">Features</a></li>
-        <li class="item button secondary"><a href="#">Hoja de vida</a></li>
+<nav id="cambio">
+    <ul class="menu animate__animated animate__fadeInDown">
+        <li class="logo fonttwo logo-header"><a href="" (click)="reload()"> {{ name }}</a></li>
+        <li class="item"><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links" (click)="touchSoundMenu()">{{ acerca }}</a></li>
+        <li class="item"><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links" (click)="touchSoundMenu()">{{ conocimiento }}</a></li>
+        <li class="item"><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links" (click)="touchSoundMenu()">{{ experiencia }}</a></li>
+        <li class="item"><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links" (click)="touchSoundMenu()">{{ proyectos }}</a></li>
+        <li class="item"><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links" (click)="touchSoundMenu()">{{ contacto }}</a></li>
+        <li class="item button secondary"><a href="#">{{ buttonHeader}}</a></li>
         <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
     </ul>
+
 </nav>
+<div class="arriba"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="menu_bar menu">
+          <a href="" class="bt-menu  fontone" [routerLink]="['/pages/home']" routerLinkActive="router-link-active">
+            <i id="icon" class="fa fa-bars icon" aria-hidden="true"></i> {{ name }}
+        </a>
+    </div>
+    <a id="logo-header" [routerLink]="['/pages/home']" routerLinkActive="router-link-active">
+        <span class="site-name fontone">{{ name }}</span>
+        <!-- <span class="site-desc fonttwo">{{ profession }}</span> 
+    </a>
+    <nav class="menu_principal">
+        <ul>
+            <li><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links" (click)="touchSoundMenu()">{{ acerca }}</a></li>
+            <li><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links" (click)="touchSoundMenu()">{{ experiencia }}</a></li>
+            <li><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links" (click)="touchSoundMenu()">{{ proyectos }}</a></li>
+            <li><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links" (click)="touchSoundMenu()">{{ contacto }}</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+<nav>
+    <ul class="menu">
+        <li class="logo fontone logo-header"><a href="#"> {{ name }}</a></li>
+        <li><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links item" (click)="touchSoundMenu()">{{ acerca }}</a></li>
+        <li><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links item" (click)="touchSoundMenu()">{{ experiencia }}</a></li>
+        <li><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links item" (click)="touchSoundMenu()">{{ proyectos }}</a></li>
+        <li><a [routerLink]="['/pages/home']" routerLinkActive="router-link-active" class="fonttwo links item" (click)="touchSoundMenu()">{{ contacto }}</a></li>
+        <li class="item button secondary"><a href="#">{{ buttonHeader}}</a></li>
+        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+</nav>-->

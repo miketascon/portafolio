@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Howl, Howler} from 'howler';
 
 declare var $;
+
+
 
 @Component({
   selector: 'app-navbar',
@@ -9,25 +12,81 @@ declare var $;
 })
 export class NavbarComponent implements OnInit {
 
-  public name = '[Tascón, Andrés]';
+  public name = '[AT]';
   public profession = '/*** Software developer ***/';
   public acerca = '{ Acerca }';
   public experiencia = '{ Experiencia }';
   public proyectos = '{ Proyectos }';
   public contacto = '{ Contacto }';
+  public buttonHeader = 'PERFIL';
+  public conocimiento = '{ Conocimiento }';
 
-  constructor() { }
+  private soundMenu = new Howl({
+    src: ['/assets/sounds/scanner-1.mp3']
+  });
+
+  constructor() {
+  
+   }
 
   ngOnInit(): void {
-    $(() => {
-      $('.toggle').on('click', () => {
+
+
+    $(() => { $('.toggle').on('click', () => {
         if ($('.item').hasClass('active')) {
-          $('.item').removeClass('active');
-          $(this).find('a').html('<i class="fas fa-times"></i>');
+          $('.item').addClass('animate__animated animate__fadeOutLeft');
+          setTimeout(() => {
+            $('.item').removeClass('active animate__animated animate__fadeOutLeft');
+          }, 500);
+          $(this).find('a').html('<i class="fas fa-times" aria-hidden="true"></i>');
         } else {
-          $('.item').addClass('active'); $(this).find('a').html('<i class="fas fa-times"></i>');
-        } });
+          $('.item').addClass('active animate__animated animate__fadeInLeft');
+          $(this).find('a').html('<i class="fas fa-bars" aria-hidden="true"></i>');
+        }
+      });
     });
+
+    $(window).on('scroll', (): void => {
+      if ($(window).scrollTop()) {
+          $('nav').addClass('animate__animated animate__fadeOutUp');
+          $('.arriba').addClass('display animate__animated animate__fadeIn');
+      } else {
+        $('nav').removeClass('animate__animated animate__fadeOutUp');
+        $('.arriba').removeClass('display animate__animated animate__fadeOut');
+      }
+    });
+
+    $(() => {
+      $('.arriba').click(() => {
+        $('body, html').animate({
+          scrollTop: '0px'
+        }, 300);
+      });
+    });
+
+   /*  $(document).ready(() => {
+      $('arriba').click(() => {
+        $('body, html').animate({
+          scrollTop: '0px'
+        }, 300);
+      });
+      $(window).scroll(() => {
+        if ( $(this).scrollTop() > 0 ){
+          $('arriba').slideDown(300);
+        } else {
+          $('arriba').slideUp(300);
+        }
+      });
+    }); */
+
+  }
+
+  touchSoundMenu(): void {
+    this.soundMenu.play();
+  }
+
+  reload(): void{
+    window.location.replace('#/pages/home');
   }
 
 }

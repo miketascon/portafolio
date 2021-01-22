@@ -1,3 +1,41 @@
+:root {
+    --background-cool: #0d212e;
+    --background-cool-transparent: rgba(13, 33, 46, 0.85);
+    --eucalyptus: #49e9a6;
+    --primaro: #5998c0;
+    --segundo: #7068B1;
+    --tercero: #c37455;
+    --cuarto: #3f848d;
+    --quinto: #5e7887;
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-hover: #4fd0b2;
+    --green-tint: rgba(100, 255, 218, 0.1);
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+    --border-radius: 4px;
+    --nav-height: 100px;
+    --nav-scroll-height: 70px;
+    --tab-height: 42px;
+    --tab-width: 120px;
+    --transition-duration: 3s;
+    --transition-delay: 3s;
+}
+
+@import '~animate.ccs/animate.min';
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 
 /** <= mostrar las url del portafolio para la vista**/
@@ -18,11 +56,12 @@
 
 body {
     /*  background-color: #0d2c3f !important; */
-    background-color: #0d212e !important;
+    background-color: var(--background-cool) !important;
+    /* background-color: var(--navy) !important; */
 }
 
 body::-webkit-scrollbar {
-    width: 5px;
+    width: 2px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -31,7 +70,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 * {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+.animate__animated .animate__fadeInDown {
+    --animate-duration: 2s;
 }
