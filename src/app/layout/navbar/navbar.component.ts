@@ -10,7 +10,7 @@ declare var $;
 })
 export class NavbarComponent implements OnInit {
 
-  public name = '[{AT}]';
+  public name = '[(AT)]';
   public profession = '/*** Software developer ***/';
   public acerca = '{ Acerca }';
   public experiencia = '{ Experiencia }';
