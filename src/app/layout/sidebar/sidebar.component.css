@@ -1,0 +1,43 @@
+.social {
+    position: fixed;
+    /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+    left: 0px;
+    /* Establecemos la barra en la izquierda */
+    top: 200px;
+    /* Bajamos la barra 200px de arriba a abajo */
+    z-index: 2000;
+    border-radius: 10px;
+    /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social ul li a {
+    display: inline-block;
+    color: var(--lightest-slate);
+    background: var(--background-cool-transparent);
+    padding: 10px 15px;
+    text-decoration: none;
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    /* Establecemos una transición a todas las propiedades */
+}
+
+.social ul li a:hover {
+    background: var(--background-cool-transparent);
+    font-size: 21px;
+    color: var(--eucalyptus);
+}
+
+.social ul li a i {
+    font-size: 20px;
+}
+
+@media all and (max-width: 600px) {
+    .social {
+        display: none;
+    }
+}

@@ -1,11 +1,12 @@
 /********************** Nuevo header ************************************/
 
 nav {
-    background-color: var(--dark-navy) !important;
+    background-color: var(--background-cool-transparent) !important;
     padding: 5px 20px;
     position: fixed;
     width: 100%;
     border-top: 3px solid #21465e;
+    backdrop-filter: blur(3px);
 }
 
 ul {
@@ -17,7 +18,7 @@ a {
 }
 
 .logo a {
-    color: var(--eucalyptus) !important;
+    color: var(--eucalyptus);
 }
 
 a:hover {
@@ -26,7 +27,7 @@ a:hover {
 
 .logo a:hover {
     text-decoration: none;
-    color: var(--green-hover);
+    color: var(--light-slate);
     transition: 500ms;
 }
 
@@ -67,6 +68,10 @@ a:hover {
     filter: blur(0.7px);
     transition: 800ms;
     color: var(--green-hover);
+}
+
+.navScroll {
+    position: fixed;
 }
 
 
@@ -127,7 +132,7 @@ a:hover {
         padding: 7.5px 15px;
         background: teal;
         border: 1px var(--eucalyptus) solid;
-        border-radius: 5px;
+        border-radius: 3px;
     }
     .button.secondary a {
         background: transparent;
@@ -172,142 +177,24 @@ a:hover {
     }
 }
 
-
-/************************ logo tranformation *********************************/
-
-
-/****************************************************************/
-
-
-/*
-#main-header {
-    background-color: var(--background-cool-transparent) !important;
-    height: 80px;
-    border-top: 3px solid #21465e;
-    overflow: hidden;
-    width: 100%;
-    position: fixed;
-    box-shadow: 0 10px 30px -10px var(--navy-shadow); 
-}
-
-.menu_bar {
+.arriba {
     display: none;
-}
-
-.links {
-    color: var(--light-slate);
-    font-size: var(--fz-md);
-}
-
-.links:hover {
-    filter: blur(0.7px);
-    transition: 800ms;
-    color: var(--green-hover);
-}
-
-#logo-header {
-    float: left;
-    padding-top: 25px;
-    padding-left: 40px;
-    padding: 15px 0 0 30px; 
-    text-decoration: none;
+    padding: 10px;
+    background-color: var(--background-cool-transparent) !important;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 2;
     color: var(--eucalyptus);
+    border-radius: 50%;
 }
 
-#logo-header:hover {
-    color: var(--green-hover);
-    transition: 500ms;
+.arriba:hover {
+    color: var(--light-slate);
 }
 
-#logo-header .site-name {
-    display: block;
-    font-weight: 700;
-    font-size: 1.2em;
-}
-
-#logo-header .site-desc {
-    display: block;
-    font-weight: 300;
-    font-size: 0.8em;
-    color: var(--quinto);
-}
-
-nav {
-   float: rigth; 
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    padding-right: 30px;
-}
-
-nav ul li {
+.display {
     display: inline-block;
-    line-height: 80px;
 }
-
-nav ul li a {
-    display: block;
-    padding: 0 10px;
-    text-decoration: none;
-}
-
-
-@media screen and (max-width: 780px) {
-    #main-header {
-        background-color: rgb(18, 46, 65) !important;
-        height: 100%;
-        overflow: hidden;
-        width: 80%;
-        position: fixed;
-        border-bottom: 0.2px solid #21465e;
-    }
-    nav {
-        float: none;
-    }
-    nav ul li {
-        display: block;
-        float: none;
-        border-bottom: 0.2px solid #21465e;
-        text-align: center;
-    }
-    #logo-header {
-        display: none;
-    }
-    .menu_bar {
-        display: block;
-        width: 100%;
-        background-color: rgba(13, 33, 46, 0.9) !important;
-        margin: 0;
-        padding: 0;
-    }
-    .menu_bar .bt-menu {
-        display: block;
-        padding: 20px;
-        width: 100%;
-        text-decoration: none !important;
-        background-color: rgba(13, 33, 46, 0.9) !important;
-        text-align: center;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    .bt-menu {
-        float: left;
-        text-decoration: none;
-        color: #64ffda;
-        font-weight: 700;
-        font-size: 1.2em;
-    }
-    .bt-menu:hover {
-        color: #4fd0b2;
-        transition: 500ms;
-    }
-    .menu_bar .icon {
-        float: right !important;
-        font-size: 30px !important;
-    }
-}
-*/

@@ -31,10 +31,11 @@
     --nav-scroll-height: 70px;
     --tab-height: 42px;
     --tab-width: 120px;
-    --transition-duration: 0.2s;
-    --transition-delay: 0.2s;
+    --transition-duration: 3s;
+    --transition-delay: 3s;
 }
 
+@import '~animate.ccs/animate.min';
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 
 /** <= mostrar las url del portafolio para la vista**/
@@ -55,12 +56,12 @@
 
 body {
     /*  background-color: #0d2c3f !important; */
-    background-color: var(--light-navy) !important;
+    background-color: var(--background-cool) !important;
     /* background-color: var(--navy) !important; */
 }
 
 body::-webkit-scrollbar {
-    width: 5px;
+    width: 2px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -71,4 +72,8 @@ body::-webkit-scrollbar-thumb {
 * {
     padding: 0;
     margin: 0;
+}
+
+.animate__animated .animate__fadeInDown {
+    --animate-duration: 2s;
 }
