@@ -1,7 +1,7 @@
 .social {
     position: fixed;
     /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-    left: 0px;
+    left: 15px;
     /* Establecemos la barra en la izquierda */
     top: 200px;
     /* Bajamos la barra 200px de arriba a abajo */
@@ -18,7 +18,7 @@
     display: inline-block;
     color: var(--lightest-slate);
     background: var(--background-cool-transparent);
-    padding: 10px 15px;
+    padding: 4px;
     text-decoration: none;
     -webkit-transition: all 200ms ease;
     -o-transition: all 200ms ease;

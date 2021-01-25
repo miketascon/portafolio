@@ -14,11 +14,11 @@ export class NavbarComponent implements OnInit {
 
   public name = '[AT]';
   public profession = '/*** Software developer ***/';
-  public acerca = '{ Acerca }';
+  public acerca = '{ Sobre mi }';
   public experiencia = '{ Experiencia }';
   public proyectos = '{ Proyectos }';
   public contacto = '{ Contacto }';
-  public buttonHeader = 'PERFIL';
+  public buttonHeader = 'Resumen';
   public conocimiento = '{ Conocimiento }';
 
   private soundMenu = new Howl({
@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
   });
 
   constructor() {
-  
+
    }
 
   ngOnInit(): void {

@@ -35,7 +35,11 @@
     --transition-delay: 3s;
 }
 
-@import '~animate.ccs/animate.min';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap');
+.ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 
 /** <= mostrar las url del portafolio para la vista**/

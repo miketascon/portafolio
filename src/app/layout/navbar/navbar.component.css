@@ -1,12 +1,12 @@
-/********************** Nuevo header ************************************/
-
 nav {
     background-color: var(--background-cool-transparent) !important;
+    /* background: var(--background-cool) !important; */
     padding: 5px 20px;
     position: fixed;
     width: 100%;
     border-top: 3px solid #21465e;
     backdrop-filter: blur(3px);
+    z-index: 1;
 }
 
 ul {
@@ -66,7 +66,7 @@ a:hover {
 
 .links:hover {
     filter: blur(0.7px);
-    transition: 800ms;
+    transition: 200ms;
     color: var(--green-hover);
 }
 
@@ -101,6 +101,10 @@ a:hover {
 
 .item.active {
     display: block;
+}
+
+.button.secondary a:hover {
+    color: var(--green-hover);
 }
 
 

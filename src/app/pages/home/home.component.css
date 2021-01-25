@@ -1,7 +1,89 @@
 .principal {
+    font-family: 'Source Code Pro', monospace;
     padding-top: 100px;
 }
 
+.principal h1 {
+    color: var(--lightest-slate) !important;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 60px;
+}
+
+.principal h2 {
+    color: var(--light-slate) !important;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+}
+
+.principal h3 {
+    color: var(--light-slate) !important;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+}
+
+.descripcion {
+    color: var(--quinto) !important;
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+.saludo {
+    color: var(--white)! important;
+}
+
 p {
-    color: white;
+    color: var(--quinto);
+}
+
+hr {
+    background-color: var(--eucalyptus);
+}
+
+.parrafo {
+    text-justify: auto;
+}
+
+button {
+    color: var(--light-slate);
+    background: var(--background-cool-transparent) !important;
+    border: 1px var(--eucalyptus) solid;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+button:hover {
+    color: var(--eucalyptus);
+}
+
+.button {
+    padding-bottom: 8em;
+}
+
+
+/*******Section acerca***************************/
+
+.image-perfil {
+    border: 1px;
+    border-color: (--quinto);
+    padding-left: 20px;
+}
+
+.image-perfil img {
+    filter: blur(5px);
+}
+
+.image-perfil img:hover {
+    filter: blur(0px);
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+@media all and (max-width: 600px) {
+    .principal h1 {
+        font-size: 40px;
+    }
+    .principal h2 {
+        font-size: 30px;
+    }
 }
