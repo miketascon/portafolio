@@ -69,12 +69,13 @@ hr {
     padding-bottom: 80px;
 }
 
-button {
+.button a {
     color: var(--light-slate);
     background: var(--background-cool-transparent) !important;
     border: 1px var(--eucalyptus) solid;
     border-radius: 3px;
     padding: 20px;
+    text-decoration: none;
 }
 
 button:hover {

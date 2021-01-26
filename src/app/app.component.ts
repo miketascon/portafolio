@@ -23,10 +23,10 @@ export class AppComponent implements OnInit {
            this.estado = false;
           }
 
-        }, 2100);
-      }, 2000);
+        }, 1100);
+      }, 1000);
     }
-   
+
 
   }
 

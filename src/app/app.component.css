@@ -4,7 +4,7 @@
 
 .loading p {
     color: var(--light-slate);
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
 }
