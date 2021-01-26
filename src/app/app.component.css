@@ -1,0 +1,14 @@
+.loading {
+    padding-top: 15em;
+}
+
+.loading p {
+    color: var(--light-slate);
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.progress-bar {
+    background-color: var(--eucalyptus) !important;
+}

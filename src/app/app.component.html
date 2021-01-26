@@ -1,2 +1,16 @@
-<router-outlet>
+<div class="container" *ngIf="estado === false">
+
+    <div class="loading">
+
+        <p>Loading...</p>
+        <div class="progress ">
+            <div class="progress-bar" role="progressbar" style="width: {{loading}}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<router-outlet *ngIf="estado === true">
 </router-outlet>

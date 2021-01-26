@@ -7,12 +7,13 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 
+
 @NgModule({
-  declarations: [NavbarComponent, FooterComponent, SidebarComponent],
+  declarations: [NavbarComponent, FooterComponent, SidebarComponent,],
   imports: [
     CommonModule,
     RouterModule
   ],
-  exports: [NavbarComponent, FooterComponent, SidebarComponent],
+  exports: [NavbarComponent, FooterComponent, SidebarComponent, ],
 })
 export class LayoutModule { }
